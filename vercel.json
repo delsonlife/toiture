@@ -1,26 +1,15 @@
 {
   "version": 2,
-  "outputDirectory": "public",
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/widget.js",
-      "dest": "/public/widget.js"
-    },
-    {
-      "src": "/widget.css",
-      "dest": "/public/widget.css"
-    }
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/widget.js", "dest": "/public/widget.js" },
+    { "src": "/widget.css", "dest": "/public/widget.css" }
   ],
   "headers": [
     {
       "source": "/api/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" }
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
       ]
     },
     {
