@@ -1,13 +1,12 @@
 {
   "name": "roof-widget",
   "version": "1.0.0",
-  "description": "Widget calculateur de devis toiture",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "build": "echo ok"
   },
   "engines": {
-    "node": ">=18.x"
+    "node": "20.x"
   }
 }
