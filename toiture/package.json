@@ -1,0 +1,24 @@
+{
+  "name": "roof-widget",
+  "version": "1.0.0",
+  "description": "Widget calculateur de devis toiture — SaaS B2B pour couvreurs",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "npm run minify && npm run obfuscate",
+    "minify": "terser public/widget.js -o public/widget.min.js --compress --mangle --source-map",
+    "obfuscate": "javascript-obfuscator public/widget.min.js --output public/widget.obf.js --compact true --self-defending true --string-array true --string-array-threshold 0.75 --rotate-string-array true --shuffle-string-array true --split-strings true --split-strings-chunk-length 10 --identifier-names-generator mangled --control-flow-flattening false --dead-code-injection false",
+    "deploy": "npm run build && vercel --prod",
+    "deploy:preview": "vercel",
+    "lint": "echo 'No linter configured'"
+  },
+  "devDependencies": {
+    "terser": "^5.31.0",
+    "javascript-obfuscator": "^4.1.1",
+    "vercel": "^33.0.0"
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}
